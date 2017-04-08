@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_comic_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black_opacity_66"
+
+    tools:context="com.example.qianxun.qianxuncomic.ReadingActivity">
+
+    <include layout="@layout/toolbar"></include>
+    <com.example.qianxun.qianxuncomic.fragment.ReadingSlide
+        android:id="@+id/slideShowView"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:fitsSystemWindows="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bk_defalt" />
+
+
+</RelativeLayout>

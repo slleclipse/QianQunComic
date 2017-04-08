@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.qianxun.qianxuncomic.MainActivity" >
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!-- 内容界面 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.example.qianxun.qianxuncomic.widget.PagerSlidingTabStrip
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="48dip" >
+            </com.example.qianxun.qianxuncomic.widget.PagerSlidingTabStrip>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
+
+        <!-- 侧滑菜单内容 -->
+
+        <LinearLayout
+            android:id="@+id/drawer_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@drawable/sky"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:background="@drawable/sky"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:adjustViewBounds="true"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"
+                    android:src="@drawable/user_image"
+                    android:id="@+id/user_image" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/user_id" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/drawerlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:background="@drawable/sky2"
+                android:choiceMode="singleChoice"
+                android:divider="@android:color/white"
+                android:dividerHeight="1dp"
+                android:drawSelectorOnTop="false"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

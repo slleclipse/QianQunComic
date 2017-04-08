@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.qianxun.qianxuncomic">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATIONS" />
+
+    <application
+        android:name=".fragment.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qianxun.qianxuncomic.MainActivity" />
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UserDownLoadActivity"
+            android:label="@string/title_activity_user_down_load"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qianxun.qianxuncomic.MainActivity" />
+        </activity>
+        <activity android:name=".RegisteActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qianxun.qianxuncomic.LoginActivity" />
+        </activity>
+        <activity android:name=".ComicInfoActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qianxun.qianxuncomic.MainActivity" />
+        </activity>
+        <activity android:name=".ReadingActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qianxun.qianxuncomic.ComicInfoActivity" />
+        </activity>
+        <activity android:name=".DownloadActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qianxun.qianxuncomic.ReadingActivity" />
+        </activity>
+        <activity android:name=".CatalogActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qianxun.qianxuncomic.ReadingActivity" />
+        </activity>
+        <activity android:name=".ResultActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qianxun.qianxuncomic.MainActivity" />
+        </activity>
+        <activity android:name=".HistoryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qianxun.qianxuncomic.MainActivity" />
+        </activity>
+        <activity android:name=".CollectionActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qianxun.qianxuncomic.MainActivity" />
+        </activity>
+
+        <service
+            android:name=".Service.DownloadService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".DownLoadedChapterActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qianxun.qianxuncomic.UserDownLoadActivity" />
+        </activity>
+    </application>
+
+</manifest>
